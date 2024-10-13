@@ -4,9 +4,6 @@ import { redirect } from 'next/navigation'
 
 export default async function Home() {
   const session = await getSession()
-  if (!session.isLoggedIn) {
-    redirect('/auth/login')
-  }
   return (
     <main className="flex min-h-[100dvh] items-center justify-center bg-gray-100 px-4 dark:bg-gray-900">
       <div className="w-full max-w-md space-y-4 text-center">
